@@ -1,3 +1,7 @@
 .main_title {
   color: green;
+  font-size: 43px;
+}
+.img:hover {
+  -webkit-transform: scale(2,2);
 }

@@ -9,14 +9,14 @@
     <title>Constantina's page</title>
     <style>
         body {
-            background-image: url("background2.jpg");
+            background-image: url("background5.jpg");
         }
 
         .main {
             background-color: white;
-            margin: 20px;
+            margin: 130px;
             box-shadow: 10px 10px 5px #888888;
-            padding: 10px;
+            padding: 100px;
             /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1ffff+0,e1ffff+7,e1ffff+12,fdffff+12,e6f8fd+30,c8eefb+54,bee4f8+75,b1d8f5+100;Blue+Pipe+%232 */
 background: #e1ffff; /* Old browsers */
 background: -moz-linear-gradient(top, #e1ffff 0%, #e1ffff 7%, #e1ffff 12%, #fdffff 12%, #e6f8fd 30%, #c8eefb 54%, #bee4f8 75%, #b1d8f5 100%); /* FF3.6-15 */
@@ -24,6 +24,24 @@ background: -webkit-linear-gradient(top, #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdff
 background: linear-gradient(to bottom, #e1ffff 0%,#e1ffff 7%,#e1ffff 12%,#fdffff 12%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1ffff', endColorstr='#b1d8f5',GradientType=0 ); /* IE6-9 */
         }
+        div.container1 {
+          align-items: center;
+    }
+    .picture {
+        display: inline-block;
+    }
+        .img:hover{
+    color: #424242;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  opacity: 1;
+  transform: scale(1.5);
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+}
         .rotated-image{
           -ms-transform: rotate(90deg); /* IE 9 */
           -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
@@ -35,12 +53,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1ffff', end
 
 <body>
     <div class="main">
-        <h1 class="main_title">Welcome to Constantina's page  (..work in <progress value="30" max="100">0%</progress>)</h1>
+        <h1 class="main_title">Welcome to Constantina's page</h1>
+        <h1 class="main_title">.....work in <progress value="30" max="100">0%</progress></h1>
+        <table>
+           <tr>
+        <td>
 
-        <!-- NAVBAR -->
+          <img src="https://avatars3.githubusercontent.com/u/23738423?v=3&u=dc90c7ff007a4ac87a3283e4a630c438e2324db4&s=400" alt="Constantina" style="width:160px;height:160px;"></img>
+
+        </td>
+
+
         <div>
 
             <div>
+
+                    <td>
+
                 <a href="#">Constantina Polycarpou</a>
 
                 <ul>
@@ -52,15 +81,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1ffff', end
             </div>
             <!-- .container -->
         </div>
-
-        <img src="https://avatars3.githubusercontent.com/u/23738423?v=3&u=dc90c7ff007a4ac87a3283e4a630c438e2324db4&s=400" alt="Constantina" style="width:200px;height:200px;"></img>
-
+      </td>
+      </tr>
+</table>
+<span style="display:inline-block; height: 70px;"></span>
+<div style="text-align: center;">
         <h2 class="heading">My country</h2>
-        <img src="./cyprus.png" style="width:300px;height:228px;" />
 
+        <img src="cyprus.png" class="img" alt="Cyprus" width="300" height="200" />
+</div>
 
     <section>
-
+    <span style="display:inline-block; height: 100px;"></span>
         <div>
 
             <ul>
@@ -69,6 +101,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1ffff', end
 
                     <h2 class="heading">Education</h2>
                     <p>Ph.D. in Atomic and Molecular Spectroscopy. Thesis title: " Adaptive detection of arbitrarily shaped ultrashort quantum light states"</p>
+                    <p>Degree in Physics (2.1 Upper 2nd class honours)</p>
                         <h4 class="heading">Publications</h4>
                         <ul>
                         <li>Phys. Rev. Lett. 109, 053602 (2012). “Adaptive detection of arbitrarily shaped ultrashort quantum light states”, by C. Polycarpou, K. Cassemiro, G. Venturi, A. Zavatta, M. Bellini.</li>
@@ -121,43 +154,76 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1ffff', end
                       <li> Poster prize at the 453. Heraeus Seminar: voted by the participants and organizers to be among the 3 best presentations of the conference.</li>
                       <li> Grant for top advanced undergraduate student from Onassis foundation to attend the “BEC” summer school in Crete.</li>
                       <li> Award from Physics Dep., A.U.Th. for top score in qualifying exams for Cypriots of my year.</li>
-                      <li> Top student scholarship from the Government of Cyprus. ▪ Graduated from High school with an average of 19.818 out of 20, awarded “best student” awards in Physics and French, and was “top student” of my graduating year 2000-’01.</li>
+                      <li> Top student scholarship from the Government of Cyprus. </li>
+                      <li> Graduated from High school with an average of 19.818 out of 20, awarded “best student” awards in Physics and French, and was “top student” of my graduating year 2000-’01.</li>
                     </ul>
+                    <table>
+   <tr>
+      <td>
+        <h4 class="heading">Poster prize</h4>
+        <img class="img" src="./posterprizerotated.png" alt="" style="width:220px;height:228px;"></img>
+      </td>
+      <td>
+        <h4 class="heading">DBS checked</h4>
+        <img class="img" src="./DBS.jpg" alt="" style="width:220px;height:228px;"></img>
+      </td>
+   </tr>
+</table>
 
-                    <img class="rotated-image" src="./posterprize.jpg" style="width:220px;height:228px;"></img>
 
-                    <h2 class="heading">DBS checked</h2>
-                    <img src="./DBS.jpg" style="width:220px;height:228px;"></img>
+<span style="display:inline-block; height: 100px;"></span>
+<div>
 
-                    <h2 class="heading">Interests</h2>
+                    <h2 class="heading" style="text-align:center">Interests</h2>
+
                     <h4 class="heading">Electronic music</h4>
                     <li><a href="https://soundcloud.com/constance-constance" target="_blank">Soundlcloud</a></li>
+    <span style="display:inline-block; height: 50px;"></span>
 
-                    <h4 class="heading">Photography</h4>
-                    <li><a href="https://www.instagram.com/consti__consta/" target="_blank">Instagram</a></li>
+                    <h4 class="heading">Photography/Design</h4>
 
                     <p>Testing my creative skills, I made this for a charity event using Gimp:</p>
-                    <img src="./mediposter.jpg" style="width:280px;height:360px;"></img>
+                    <img class="img" src="./mediposter.jpg" alt="" style="width:280px;height:360px;"></img>
+                    <p> Do come back for news on my upcoming photography portofolio page. </p>
+    <span style="display:inline-block; height: 50px;"></span>
+
                     <h4 class="heading">Speleology and rock climbing</h4>
 
-                    <p>Member of Italian Alpinian CLub and Florentine Speleology Group (GSF-CAI)</p>
 
                     <img src="./speleo.jpg" style="width:220px;height:228px;"></img>
                     <img src="./capra.jpg" style="width:220px;height:228px;"></img>
                     <img src="./sunset.jpg" style="width:220px;height:228px;"></img>
-                    <img src="./lalineadelbuio.jpg" style="width:200px;height:228px;"><img>
+                    <img src="./lalineadelbuio.jpg" style="width:200px;height:228px;"></img>
+<p>Member of Italian Alpinian CLub and Florentine Speleology Group (GSF-CAI)</p>
+
+    <span style="display:inline-block; height: 80px;"></span>
 
                     <h4 class="heading">Philosophy of Science</h4>
-                    <h5 class="heading">Is there free will?</h5>
-                    <li><a href="https://www.ted.com/talks/ed_yong_suicidal_wasps_zombie_roaches_and_other_tales_of_parasites#t-52481" target="_blank"> Answer</a></li>
-                    <h5 class="heading">Combination of Mathematics with Psychology</h5>
-                    <img src="./asintota.jpg" style="width:220px;height:228px;"></img>
+                  <ul>
+                  <li>  <h5 class="heading">Is there free will?</h5>
+                    <li><a href="https://www.ted.com/talks/ed_yong_suicidal_wasps_zombie_roaches_and_other_tales_of_parasites#t-52481" target="_blank"> Answer</a></li></li>
 
-                    <h5 class="heading">Evolutionary Psychology</h5>
+  <span style="display:inline-block; height: 50px;"></span>
+
+                <li> <h5 class="heading">Combination of Mathematics with Psychology</h5>
+                    <img class="img" src="./asintota.jpg" style="width:220px;height:228px;"></img></li>
+                    <p>"Asymptote: something one desires, and that is approaching in a constant manner, but never quite manages to fulfill."</p>
+                    <p>A little bit of etymology and history: The word asymptote is derived from the Greek ἀσύμπτωτος (asumptōtos) which means "not falling together", from ἀ priv. + σύν "together" + πτωτ-ός "fallen".The term was introduced by Apollonius of Perga in his work on conic sections, but in contrast to its modern meaning, he used it to mean any line that does not intersect the given curve.</p>
+
+    <span style="display:inline-block; height: 50px;"></span>
+
+                  <li>  <h5 class="heading">Evolutionary Psychology</h5>
                     <p> "Everyone possesses a sense of justice, however misguided it may be. How do people acquire this sense? Where does it come from? In this chapter, I argue that to account for the acquisition of a sense of justice, we must identify the mental mechanisms that produce it and explain how they originated and became reﬁ ned in the course of human evolution. Explaining how a sense of justice originated in the human species helps us understand what it is, what it is for, how it is designed, what activates it, and why it sometimes fails to give rise to fair judgments and behaviors." The Evolution of a Sense of Justice, by Dennis L. Krebs</p>
-                    <li><cite><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1679&rep=rep1&type=pdf" target="_blank"><i class="fa fa-citation"></i> Cit.</a></cite></li>
-                    <h5 class="heading">Politics in our times</h5>
-                    <img src="./politicsthesedays.jpg" style="width:200px;height:200px;"></img>
+                    <li><<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1679&rep=rep1&type=pdf" target="_blank">Cit.</a></li></li>
+
+    <span style="display:inline-block; height: 50px;"></span>
+
+                  <li>  <h5 class="heading">Politics in our times</h5>
+                    <img src="./politicsthesedays.jpg" style="width:200px;height:200px;"></img></li>
+              </ul>
+</div>
+
+    <span style="display:inline-block; height: 150px;"></span>
 
                     <div style="text-align: right;" , class="col-md-7">
                         <h2 style="text-align: right;">Letting Go of God, by Julia Sweeny</h2>
