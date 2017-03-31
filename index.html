@@ -48,6 +48,8 @@
       </tr>
     </table>
     <span style="display:inline-block; height: 70px;"></span>
+
+
     <div style="text-align: center;">
       <h2 class="heading">My country</h2>
 
@@ -154,59 +156,153 @@
               <div style="text-align: center;">
                 <img class="img" src="./mediposter.jpg" alt="" style="width:280px;height:360px;"></img>
               </div>
-              <p> Do come back for news on my upcoming photography portofolio page. </p>
+              <p> Come back for news on my upcoming photography portofolio page. </p>
               <span style="display:inline-block; height: 50px;"></span>
 
               <h3 class="heading">Speleology and rock climbing</h3>
+              <script type="text/javascript">
+                var interval = 3000;
+                var switching = setInterval("toggleSlide(true)", interval);
 
-              <div style="text-align: center;">
-                <img src="./speleo.jpg" class="img" style="width:220px;height:238px;"></img>
-                <img src="./capra.jpg" class="img" style="width:220px;height:238px;"></img>
-                <img src="./sunset.jpg" class="img" style="width:220px;height:238px;"></img>
-                <img src="./caschi.jpg" style="width:220px;height:238px;"></img>
-                <img src="./lalineadelbuio.jpg" class="img" style="width:220px;height:238px;"></img>
+                window.paused = false;
 
-              </div>
-              <p>Member of Italian Alpinian CLub and Florentine Speleology Group (GSF-CAI)</p>
+                function toggleInterval() {
+                  var button = document.getElementById("pauseButton");
+                  if (!window.paused) {
+                    clearInterval(switching);
+                    button.value = "Resume";
+                  } else {
+                    switching = setInterval("toggleSlide(true)", interval);
+                    button.value = "Pause";
+                  }
+                  window.paused = !(window.paused);
+                }
 
-              <span style="display:inline-block; height: 80px;"></span>
 
-              <h3 class="heading">Philosophy of Science</h3>
-              <ul>
-                <li>
-                  <h4 class="heading">Is there free will?</h4>
-                  <a href="https://www.ted.com/talks/ed_yong_suicidal_wasps_zombie_roaches_and_other_tales_of_parasites#t-52481" target="_blank"> Answer</a>
-                </li>
+                function toggleSlide(direction) {
+                  var elements = document.getElementsByClassName("hideable");
 
-                <span style="display:inline-block; height: 50px;"></span>
 
-                <li>
-                  <h4 class="heading">Combination of Mathematics with Psychology</h4>
-                  <img class="img" src="./asintota.jpg" style="width:220px;height:228px;"></img>
-                </li>
-                <p>"Asymptote: something one desires, and that is approaching in a constant manner, but never quite manages to fulfill."</p>
-                <p>A little bit of etymology and history: The word asymptote is derived from the Greek ἀσύμπτωτος (asumptōtos) which means "not falling together", from ἀ priv. + σύν "together" + πτωτ-ός "fallen".The term was introduced by Apollonius of Perga in his work on conic sections, but in contrast to its modern meaning, he used it to mean any line that does not intersect the given curve.</p>
+                  var visibleID = getVisible(elements);
 
-                <span style="display:inline-block; height: 50px;"></span>
+                  elements[visibleID].style.display = "none";
+                  if (!direction) {
+                    var makeVisible = prev(visibleID, elements.length);
+                  } else {
+                    var makeVisible = next(visibleID, elements.length);
+                  }
+                  elements[makeVisible].style.display = "block";
+                  var sn = document.getElementById("slideNumber");
+                  sn.innerHTML = (makeVisible + 1);
+                }
 
-                <li>
-                  <h4 class="heading">Evolutionary Psychology</h4>
-                  <p> "Everyone possesses a sense of justice, however misguided it may be. How do people acquire this sense? Where does it come from? In this chapter, I argue that to account for the acquisition of a sense of justice, we must identify the mental mechanisms that produce it and explain how they originated and became reﬁ ned in the course of human evolution. Explaining how a sense of justice originated in the human species helps us understand what it is, what it is for, how it is designed, what activates it, and why it sometimes fails to give rise to fair judgments and behaviors." </p>
-                  <p> The Evolution of a Sense of Justice, by Dennis L. Krebs</p>
-                  <li>
-                    <<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1679&rep=rep1&type=pdf" target="_blank">Cit.</a>
-                  </li>
-                </li>
+                function getVisible(elements) {
+                  var visibleID = -1;
+                  for (var i = 0; i < elements.length; i++) {
+                    if (elements[i].style.display == "block") {
+                      visibleID = i;
+                    }
+                  }
+                  return visibleID;
+                }
 
-                <span style="display:inline-block; height: 50px;"></span>
+                function prev(num, arrayLength) {
+                  if (num == 0) return arrayLength - 1;
+                  else return num - 1;
+                }
 
-                <li>
-                  <h4 class="heading">Politics in our times</h4>
+                function next(num, arrayLength) {
+                  if (num == arrayLength - 1) return 0;
+                  else return num + 1;
+                }
 
-                  <img src="./politicsthesedays.jpg" style="width:250px;height:250px;"></img>
+                function goToEdge(where) {
+                  var elements = document.getElementsByClassName("hideable");
+                  var visibleID = getVisible(elements);
+                  var firstButton = document.getElementById("firstButton");
+                  var lastButton = document.getElementById("lastButton");
 
-                </li>
+
+                  var sn = document.getElementById("slideNumber");
+                  elements[visibleID].style.display = "none";
+                  if (!where) {
+                    elements[0].style.display = "block";
+                    sn.innerHTML = 1;
+                  } else {
+                    elements[elements.length - 1].style.display = "block";
+                    sn.innerHTML = elements.length;
+                  }
+                }
+              </script>
+              <ul style="list-style-type:none; margin-left: 10em;">
+                <li id="1" class="hideable" style="display: none;"><img src="caschi.jpg" alt="helmets" style="width:280px;height:300px;"></li>
+                <li id="2" class="hideable" style="display: none;"><img src="sunset.jpg" alt="Sunset" style="width:280px;height:300px;"></li>
+                <li id="3" class="hideable" style="display: none;"><img src="speleo.jpg" alt="Speleo" style="width:280px;height:300px;"></li>
+                <li id="4" class="hideable" style="display: none;"><img src="capra.jpg" alt="Capra" style="width:280px;height:300px;"></li>
+                <li id="5" class="hideable" style="display: none;"><img src="lalineadelbuio.jpg" alt="Lalineadelbuio" style="width:280px;height:300px;"></li>
+                <li id="6" class="hideable" style="display: block;"><img src="sunset.jpg" alt="Sunset" style="width:280px;height:300px;"></li>
+
               </ul>
+              <p>
+                Photo
+                <span id="slideNumber"></span> of
+                <script type="text/javascript">
+                  document.write(document.getElementsByClassName("hideable").length);
+                </script>
+
+                <form>
+                  <input type="button" id="firstButton" value="First" onclick="goToEdge(false)">
+                  <input type="button" value="Back" onclick="toggleSlide(false)">
+                  <input id="pauseButton" onclick="toggleInterval()" type="button" value="Pause">
+                  <input type="button" value="Forward" onclick="toggleSlide(true)">
+                  <input type="button" id="lastButton" value="Last" onclick="goToEdge(true)">
+
+                </form>
+
+
+
+
+
+                <p>Member of the Italian Alpinian CLub and Florentine Speleology Group <a href="http://www.gsfcai.it/" target="_blank">GSF-CAI</a></p>
+
+                <span style="display:inline-block; height: 80px;"></span>
+
+                <h3 class="heading">Philosophy of Science</h3>
+                <ul>
+                  <li>
+                    <h4 class="heading">Is there free will?</h4>
+                    <a href="https://www.ted.com/talks/ed_yong_suicidal_wasps_zombie_roaches_and_other_tales_of_parasites#t-52481" target="_blank"> Answer</a>
+                  </li>
+
+                  <span style="display:inline-block; height: 50px;"></span>
+
+                  <li>
+                    <h4 class="heading">Combination of Mathematics with Psychology</h4>
+                    <img class="img" src="./asintota.jpg" style="width:230px;height:248px; margin-left: 10em;"></img>
+                  </li>
+                  <p>"Asymptote: something one desires, and that is approaching in a constant manner, but never quite manages to fulfill."</p>
+                  <p>A little bit of etymology and history: The word asymptote is derived from the Greek ἀσύμπτωτος (asumptōtos) which means "not falling together", from ἀ priv. + σύν "together" + πτωτ-ός "fallen".The term was introduced by Apollonius of Perga in his work on conic sections, but in contrast to its modern meaning, he used it to mean any line that does not intersect the given curve.</p>
+
+                  <span style="display:inline-block; height: 50px;"></span>
+
+                  <li>
+                    <h4 class="heading">Evolutionary Psychology</h4>
+                    <p> "Everyone possesses a sense of justice, however misguided it may be. How do people acquire this sense? Where does it come from? In this chapter, I argue that to account for the acquisition of a sense of justice, we must identify the mental mechanisms that produce it and explain how they originated and became reﬁ ned in the course of human evolution. Explaining how a sense of justice originated in the human species helps us understand what it is, what it is for, how it is designed, what activates it, and why it sometimes fails to give rise to fair judgments and behaviors." </p>
+                    <p> The Evolution of a Sense of Justice, by Dennis L. Krebs</p>
+                    <li>
+                      <<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1679&rep=rep1&type=pdf" target="_blank">Cit.</a>
+                    </li>
+                  </li>
+
+                  <span style="display:inline-block; height: 50px;"></span>
+
+                  <li>
+                    <h4 class="heading">Politics in our times</h4>
+
+                    <img src="./politicsthesedays.jpg" style="width:250px;height:250px;"></img>
+
+                  </li>
+                </ul>
             </div>
 
             <span style="display:inline-block; height: 150px;"></span>

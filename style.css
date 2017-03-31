@@ -34,7 +34,9 @@ a, p, ul, h4 {
       background: linear-gradient(to bottom, rgba(254,255,232,1) 0%,rgba(214,219,191,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffe8', endColorstr='#d6dbbf',GradientType=0 ); /* IE6-9 */
     }
-
+.li{
+  display: inline-block;
+}
 
     .img:hover {
       color: #424242;
